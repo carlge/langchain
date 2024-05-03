@@ -21,7 +21,7 @@ prompt = ChatPromptTemplate.from_template("""Answer the following question based
 Question: {input}""")
 
 # Create llm model
-llm = Ollama(model="llama3", temperature=0)
+llm = Ollama(model="llama3:8b", temperature=0)
 document_chain = create_stuff_documents_chain(llm, prompt)
 
 # Create retriver and revierval chain
